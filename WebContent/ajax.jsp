@@ -13,7 +13,8 @@
 		}else {
 			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlHttp.open("get","getAjaxName",true);
+		xmlHttp.open("get","getAjaxName?name=jack&age=11",true);
+		xmlHttp.send();
 	}
   </script>
 </head>
