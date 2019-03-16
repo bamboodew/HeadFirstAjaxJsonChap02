@@ -17,6 +17,7 @@
   	function myFunction() {
   		var x=document.getElementById("myP").innerHTML;
 		document.getElementById("demo").innerHTML=x;
+		alert(document.getElementById("demo").innerHTML);
 	}
   </script>
 </body>
