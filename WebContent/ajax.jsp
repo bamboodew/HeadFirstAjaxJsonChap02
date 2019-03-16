@@ -17,9 +17,10 @@
 			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		xmlHttp.open("get","getAjaxName?name=jack&age=11",true);
+		// 请求方式、请求地址
 		// xmlHttp.open("post","getAjaxName?name=jack&age=11",true);
 
-		xmlHttp.send();
+		xmlHttp.send(); // 发送请求
 		
 	}
   </script>
