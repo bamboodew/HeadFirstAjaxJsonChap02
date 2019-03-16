@@ -4,10 +4,10 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>onreadystatechange事件 </title>
+  <title>onreadystatechange事件</title>
   <script type="text/javascript">
-	var xmlhttp; // 先定义
-
+  	var xmlhttp; // 先定义
+  
   	function loadXMLDoc(url, cfunc) { // 地址和回调函数是一种以参数形式传递给另一个函数的函数。
   		if (window.XMLHttpRequest) {
   			// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -35,7 +35,9 @@
 </head>
 
 <body>
-  <div id="myDiv"><h2>使用 AJAX 修改文本内容</h2></div>
+  <div id="myDiv">
+    <h2>使用 AJAX 修改文本内容</h2>
+  </div>
   <button type="button" onclick="myFunction()">修改内容</button>
 </body>
 </html>
