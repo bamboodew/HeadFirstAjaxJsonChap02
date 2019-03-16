@@ -24,7 +24,7 @@
   				txt = ""; // 初始化为空字符串
   				x = xmlDoc.getElementsByTagName("ARTIST"); // x是歌手数组
   				for (i = 0; i < x.length; i++) {
-  					txt += x[i].childNodes[0].nodeValue + "<br>";
+  					txt += x[i].childNodes[0].nodeValue + "<br>"; // 将数组元素串起来
   				}
   				document.getElementById("myDiv").innerHTML = txt; // 将字符串转化为HTML格式的文档
   			}
