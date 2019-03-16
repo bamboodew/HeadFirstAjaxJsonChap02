@@ -18,6 +18,7 @@
   			// IE6, IE5 浏览器执行代码
   			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   		}
+  		
   		xmlhttp.onreadystatechange = function() {
   			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
   				xmlDoc = xmlhttp.responseXML;
@@ -29,6 +30,7 @@
   				document.getElementById("myDiv").innerHTML = txt; // 将字符串转化为HTML格式的文档
   			}
   		}
+  		
   		xmlhttp.open("GET", "cd_catalog.xml", true);
   		xmlhttp.send();
   	}
