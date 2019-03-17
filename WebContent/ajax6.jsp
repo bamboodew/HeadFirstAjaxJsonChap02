@@ -17,7 +17,7 @@
   	function myFunction() {
   		var x=document.getElementById("myP").innerHTML;
 		document.getElementById("demo").innerHTML=x;
-		alert(document.getElementById("demo").innerHTML);
+		alert(document.getElementById("demo").innerHTML); // 弹窗显示“demo”
 	}
   </script>
 </body>

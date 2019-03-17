@@ -16,18 +16,28 @@
 		}else {
 			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlHttp.open("get","getAjaxName?name=jack&age=11",true);
+		
+		alert("readState状态："+xmlHttp.readyState+"；status状态："+xmlHttp.status);
+		xmlHttp.onreadystatechange=function(){
+			alert("readState状态："+xmlHttp.readyState+"；status状态："+xmlHttp.status);
+			if(xmlHttp.readyState==4 && xmlHttp.status==200){
+				alert(xmlHttp.responseText);
+				document.getElementById("name").value=xmlHttp.responseText;
+			}
+		};
+		// xmlHttp.open("get","getAjaxName?name=jack&age=11",true);
 		// 请求方式、请求地址
 		// xmlHttp.open("post","getAjaxName?name=jack&age=11",true);
-
-		xmlHttp.send(); // 发送请求
-		
+		// xmlHttp.send(); // 发送请求
+		xmlHttp.open("post","getAjaxName",true);
+		xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlHttp.send("name=jack&age=11"); // 发送请求
 	}
   </script>
 </head>
 <body>
   <div style="text-align: center;">
-    <div><input type="button" value="Ajax获取数据"/>&nbsp;&nbsp;<input type="text" id="name" name="name"/></div>
+    <div><input type="button" onclick="loadName()" value="Ajax获取数据"/>&nbsp;&nbsp;<input type="text" id="name" name="name"/></div>
   </div>
 </body>
 </html>
